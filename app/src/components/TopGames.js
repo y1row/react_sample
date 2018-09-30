@@ -8,7 +8,6 @@ class TopGames extends Component {
     this.state = {games: []};
 
     new TwitchApi().getTopGames().then(games => {
-      console.log(games);
       this.setState({games: games});
     });
   }

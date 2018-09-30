@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TopGames from './components/TopGames';
+import TwitchStreamer from './components/TwitchStreamer'
+import ReactTwitchEmbedVideo from "react-twitch-embed-video";
 
 class App extends Component {
   render() {
@@ -11,10 +13,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">俺Twitch</h1>
         </header>
-        <p className="App-intro">
-          今熱いゲーム
-        </p>
-        <TopGames/>
+        {/*<TwitchStreamer name="spygea"/>*/}
+        <TwitchStreamer name="spygea"/>
+        {/*<ReactTwitchEmbedVideo channel="shroud"/>*/}
+        {/*<TopGames/>*/}
+
       </div>
     );
   }

@@ -12,6 +12,19 @@ class TwitchApi {
   getTopGames() {
     return this.caller.sendHelixRequest("games/top");
   }
+
+  getUser(name) {
+    return this.caller.getTwitchUserByName(name);
+  }
+
+  getStreamByName(name) {
+    return this.caller.getStreamInfoByUsername(name);
+  }
+
+  getVideos(user_id) {
+    return this.caller.sendHelixRequest(`videos?user_id=${user_id}&type=archive`);
+  }
+
 }
 
 export default TwitchApi;
